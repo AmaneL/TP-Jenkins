@@ -8,16 +8,27 @@ import com.imie.tp.calculator.operation.SubstractionOperation;
 import com.imie.tp.calculator.utils.HistoryManager;
 import com.imie.tp.calculator.utils.KeyboardUtils;
 
+/**
+ * Class Application
+ * @author Amane
+ *
+ */
 public class Application {
 
+	/**
+	 * Menu to display
+	 */
 	final static String MENU = "Type of Operation :\n- 1 : Addition\n- 2 : Substraction\n"
 			+ "- 3 : Divide\n- 4 : Multiplication\n- 5 : Display History\n- 9 : Quit";
 	
+	/**
+	 * Method main
+	 * @param args args
+	 */
     public static void main(String[] args) {
 
     	boolean over = false;
     	HistoryManager history = new HistoryManager();
-    	OperationCommandBase operation;
     	while(!over) {
     		try {
         		int choice = KeyboardUtils.readInt(MENU);
@@ -52,18 +63,6 @@ public class Application {
     			System.out.println("Valeur entrée incorrecte !");
     		}
     	}
-        // If enter 1
-        // Display & Ask "Enter Value a : "
-        // Display & Ask "Enter Value b : "
-        // after
-        // Display : result
-
-        // If enter 5
-        // Display last calculate :
-        //    1 + 1 = 2
-        //    2 * 3 = 6
-
-        // If enter 9 => Quit application
     }
     
     /**
@@ -91,7 +90,11 @@ public class Application {
     		return ocb;
     }
     
-    //TODO
+    /**
+     * Get the symbol of an operation
+     * @param ocb operation
+     * @return symbol
+     */
     public static Character getOperationCharacter(OperationCommandBase ocb) {
     		Character op = null;
     		if(ocb instanceof AdditionOperation) {
