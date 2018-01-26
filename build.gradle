@@ -1,1 +1,40 @@
-// TODO
+apply plugin : 'java'
+apply plugin : 'eclipse'
+apply plugin : 'idea'
+apply plugin : 'findbugs'
+apply plugin : 'pmd'
+apply plugin : 'checkstyle'
+
+checkstyle {
+	ignoreFailures = true
+	checkstyleTest.enabled = false
+}
+
+findbugs {
+	ignoreFailures = true
+	findbugsTest.enabled = false
+	sourceSets = [sourceSets.main]
+	effort = "max"
+}
+
+pmd {
+	ignoreFailures = true
+	pmdTest.enabled = false
+	ruleSets = [
+	'java-basic',
+	'java-braces',
+	'java-clone',
+	'java-codesize',
+	'java-comments',
+	'java-controversial',
+	'java-coupling'
+	]
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'junit:junit:4.12'
+}
