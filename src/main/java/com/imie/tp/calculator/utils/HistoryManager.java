@@ -22,7 +22,7 @@ public class HistoryManager {
 	 * @param line operation to add
 	 */
 	public void addToHistory(String line) {
-		
+		history += line;
 	}
 	
 	/**

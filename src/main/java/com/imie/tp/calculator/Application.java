@@ -51,21 +51,7 @@ public class Application {
     		} catch (NumberFormatException ex) {
     			System.out.println("Valeur entrée incorrecte !");
     		}
-    		
-    		//chooseOperation
-    		//enterOperand
-    		//historize
-    		//doOperation
     	}
-        // Process...
-        // Display & Ask "Type of Operation ":
-        //               - 1 : Addition
-        //               - 2 : Substraction
-        //               - 3 : Divide
-        //               - 4 : Multiplication
-        //               - 5 : Display History
-        //               - 9 : Quit
-
         // If enter 1
         // Display & Ask "Enter Value a : "
         // Display & Ask "Enter Value b : "
@@ -78,8 +64,6 @@ public class Application {
         //    2 * 3 = 6
 
         // If enter 9 => Quit application
-
-        //TODO
     }
     
     /**
@@ -109,10 +93,16 @@ public class Application {
     
     //TODO
     public static Character getOperationCharacter(OperationCommandBase ocb) {
-    		Character op = '+';
-    		//if(ocb.getClass() == AdditionOperation) {
-    			
-    		//}
+    		Character op = null;
+    		if(ocb instanceof AdditionOperation) {
+    			op = '+';
+    		} else if (ocb instanceof SubstractionOperation) {
+    			op = '-';
+    		} else if (ocb instanceof DivideOperation) {
+    			op = '/';
+    		} else {
+    			op = '*';
+    		}
     		return op;
     }
 }

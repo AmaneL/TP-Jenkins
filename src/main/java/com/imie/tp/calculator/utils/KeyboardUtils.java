@@ -19,7 +19,6 @@ public final class KeyboardUtils {
         System.out.println(displayAsk);
         int result = keyboard.nextInt();
         keyboard.nextLine();
-        keyboard.close();
         return result;
     }
     
@@ -33,7 +32,6 @@ public final class KeyboardUtils {
         System.out.println(displayAsk);
         float result = keyboard.nextFloat();
         keyboard.nextLine();
-        keyboard.close();
         return result;
     }
 }
