@@ -31,10 +31,9 @@ public class AdditionOperationTest {
 	 */
 	@Test
 	public void testMake() {
-		//AdditionOperation add = new AdditionOperation(2);
-		//add.make(3);
-		//assertEquals(5.0, add.currentValue);
-		assertTrue(true);
+		AdditionOperation add = new AdditionOperation(2);
+		add.make(3);
+		assertEquals(5.0, add.currentValue, 0);
 	}
 
 	/**
@@ -42,8 +41,7 @@ public class AdditionOperationTest {
 	 */
 	@Test
 	public void testGetCurrentValue() {
-		//AdditionOperation add = new AdditionOperation(2);
-		//assertEquals(2, add.getCurrentValue());
-		assertTrue(true);
+		AdditionOperation add = new AdditionOperation(2);
+		assertEquals(2, add.getCurrentValue(), 0);
 	}
 }

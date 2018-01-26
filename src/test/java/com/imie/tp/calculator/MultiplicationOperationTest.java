@@ -30,10 +30,9 @@ public class MultiplicationOperationTest {
 	 */
 	@Test
 	public void testMake() {
-		//MultiplicationOperation multi = new MultiplicationOperation(4);
-		//multi.make(2);
-		//assertEquals(8, multi.currentValue);
-		assertTrue(true);
+		MultiplicationOperation multi = new MultiplicationOperation(4);
+		multi.make(2);
+		assertEquals(8, multi.currentValue, 0);
 	}
 
 	/**
@@ -41,9 +40,8 @@ public class MultiplicationOperationTest {
 	 */
 	@Test
 	public void testGetCurrentValue() {
-		//MultiplicationOperation multi = new MultiplicationOperation(4);
-		//assertEquals(4, multi.getCurrentValue());
-		assertTrue(true);
+		MultiplicationOperation multi = new MultiplicationOperation(4);
+		assertEquals(4, multi.getCurrentValue(), 0);
 	}
 
 }

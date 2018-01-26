@@ -28,10 +28,9 @@ public class DivideOperationTest {
 	 */
 	@Test
 	public void testMake() {
-		//DivideOperation div = new DivideOperation(4);
-		//div.make(2);
-		//assertEquals(2, div.currentValue);
-		assertTrue(true);
+		DivideOperation div = new DivideOperation(4);
+		div.make(2);
+		assertEquals(2, div.currentValue, 0);
 	}
 
 	/**
@@ -39,9 +38,8 @@ public class DivideOperationTest {
 	 */
 	@Test
 	public void testGetCurrentValue() {
-		//DivideOperation div = new DivideOperation(4);
-		//assertEquals(4, div.getCurrentValue());
-		assertTrue(true);
+		DivideOperation div = new DivideOperation(4);
+		assertEquals(4, div.getCurrentValue(), 0);
 	}
 
 }

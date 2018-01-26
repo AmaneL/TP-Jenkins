@@ -31,10 +31,9 @@ public class SubstractionOperationTest {
 	 */
 	@Test
 	public void testMake() {
-		//SubstractionOperation sub = new SubstractionOperation(4);
-		//sub.make(2);
-		//assertEquals(2, sub.currentValue);
-		assertTrue(true);
+		SubstractionOperation sub = new SubstractionOperation(4);
+		sub.make(2);
+		assertEquals(2, sub.currentValue, 0);
 	}
 
 	/**
@@ -42,9 +41,8 @@ public class SubstractionOperationTest {
 	 */
 	@Test
 	public void testGetCurrentValue() {
-		//SubstractionOperation sub = new SubstractionOperation(4);
-		//assertEquals(4, sub.getCurrentValue());
-		assertTrue(true);
+		SubstractionOperation sub = new SubstractionOperation(4);
+		assertEquals(4, sub.getCurrentValue(), 0);
 	}
 
 }
